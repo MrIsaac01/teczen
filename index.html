@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECZEN — Computadora sin miedo | Clases de computación para niños</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Nixmat';
+            src: url('Nixmat.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .logo-nixmat {
+            font-family: 'Nixmat', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                            blue: '#0284c7',
+                            darkblue: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-sky-300 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-20 py-2 sm:h-20 sm:py-0 flex items-center justify-between">
+            <div class="flex min-w-0 items-center space-x-2 sm:space-x-3">
+                <!-- LOGO TECZEN CON FUENTE NIXMAT, TEC NEGRO Y ZEN BLANCO -->
+                <div class="shrink-0 bg-brand-blue text-white p-2 sm:p-2.5 rounded-xl font-bold text-lg sm:text-xl shadow-md logo-nixmat">
+                    <span class="text-black">TEC</span><span class="text-purple-600">ZEN</span>
+                </div>
+                <div class="min-w-0">
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-brand-blue font-semibold block">Academia de Tecnología</span>
+                    <span class="text-sm sm:text-lg font-bold leading-tight text-brand-darkblue block">Computadora sin miedo</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-black">
+                <a href="beneficios.html" class="hover:text-brand-blue transition">Beneficios</a>
+                <a href="curso.html" class="hover:text-brand-blue transition">El Curso</a>
+                <a href="inversion.html" class="hover:text-brand-blue transition">Inversión</a>
+                <a href="contacto.html" class="hover:text-brand-blue transition">Contacto</a>
+            </nav>
+            <div class="hidden md:block">
+                <a href="https://wa.me/591XXXXXXXX?text=Hola,%20quiero%20más%20información%20sobre%20los%20cursos%20de%20TECZEN" target="_blank" class="bg-brand-blue hover:bg-sky-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-sky-500/30 transition transform hover:-translate-y-0.5">
+                    Inscribir por WhatsApp
+                </a>
+            </div>
+            <button id="mobile-menu-button" type="button" class="md:hidden shrink-0 rounded-lg p-2 text-black hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden absolute right-4 top-full z-50 w-48 flex-col gap-1 rounded-xl bg-sky-200 p-2 text-sm font-medium text-black shadow-lg" aria-label="Navegación móvil">
+            <a href="beneficios.html" class="rounded-lg px-3 py-2 hover:bg-sky-300 transition">Beneficios</a>
+            <a href="curso.html" class="rounded-lg px-3 py-2 hover:bg-sky-300 transition">El Curso</a>
+            <a href="inversion.html" class="rounded-lg px-3 py-2 hover:bg-sky-300 transition">Inversión</a>
+            <a href="contacto.html" class="rounded-lg px-3 py-2 hover:bg-sky-300 transition">Contacto</a>
+        </nav>
+    </header>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+            mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Abrir menú de navegación' : 'Cerrar menú de navegación');
+            mobileMenu.classList.toggle('hidden', isExpanded);
+            mobileMenu.classList.toggle('flex', !isExpanded);
+        });
+
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target instanceof HTMLAnchorElement) {
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Abrir menú de navegación');
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
+        });
+    </script>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-brand-darkblue to-sky-950 text-white py-20 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="inline-block bg-sky-500/20 text-sky-400 border border-sky-500/30 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                    🌟 Especial para niños de 8 a 9 años
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+                    Ayuda a tu hijo a perder el miedo a la <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">computadora</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
+                    Clases virtuales en vivo diseñadas para que los niños aprendan jugando, creen sus primeros proyectos digitales y desarrollen lógica y creatividad desde cero.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                    <a href="https://wa.me/591XXXXXXXX?text=Hola,%20quiero%20inscribir%20a%20mi%20hijo%20en%20TECZEN" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-sky-500/20 transition transform hover:-translate-y-0.5 text-center">
+                        🚀 Reservar Cupo por WhatsApp
+                    </a>
+                    <a href="curso.html" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 transition text-center">
+                        Ver Malla Curricular
+                    </a>
+                </div>
+                <div class="pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:justify-start text-xs text-slate-400">
+                    <span>✓ Sábados y domingos</span>
+                    <span>✓ Grupos reducidos</span>
+                    <span>✓ Sin experiencia previa</span>
+                </div>
+            </div>
+
+            <!-- IMAGEN PROMOCIONAL -->
+            <div class="relative flex justify-center">
+                <div class="w-full max-w-lg bg-gradient-to-tr from-sky-500/20 to-blue-500/20 p-3 rounded-3xl border border-sky-400/20 backdrop-blur-xl shadow-2xl shadow-sky-500/10">
+                    <img 
+                        src="hero-teczen.jpg" 
+                        alt="Niños aprendiendo computación sin miedo en TECZEN" 
+                        class="w-full h-auto rounded-2xl object-cover shadow-lg"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="py-20 bg-sky-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-blue font-semibold text-sm uppercase tracking-wider">¿Por qué elegir TECZEN?</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Una experiencia diseñada para aprender creando</h2>
+                <p class="text-slate-600">No nos limitamos a teoría aburrida; cada clase termina con un resultado tangible que el niño puede mostrar con orgullo.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-sky-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-blue group-hover:text-white transition">
+                        🎮
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Metodología Lúdica</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Clases estructuradas como aventuras y retos divertidos para mantener la atención y el entusiasmo de los niños.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-sky-100 text-brand-blue rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-blue group-hover:text-white transition">
+                        👥
+                    </div>
+                    <h3 class="
