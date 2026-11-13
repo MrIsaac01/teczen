@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inversión — TECZEN</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
         @font-face { font-family: 'Nixmat'; src: url('Nixmat.otf') format('opentype'); }
         .logo-nixmat { font-family: 'Nixmat', sans-serif; }
@@ -12,8 +14,8 @@
 <body class="bg-slate-50 text-slate-800 antialiased">
 
     <!-- Header Incrustado -->
-    <header class="bg-slate-100 shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-20 py-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:flex-nowrap sm:justify-between sm:h-20 sm:py-0">
             <div class="flex items-center space-x-3">
                 <div class="bg-brand-blue text-white p-2.5 rounded-xl font-bold text-xl shadow-md logo-nixmat">
                     <span class="text-black">TEC</span><span class="text-purple-700">ZEN</span>
@@ -23,15 +25,15 @@
                     <span class="text-lg font-bold text-brand-darkblue">Computadora sin miedo</span>
                 </div>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+            <nav class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs font-medium text-slate-600 sm:gap-x-5 sm:text-sm">
                 <a href="index.html" class="hover:text-brand-blue transition">Inicio</a>
                 <a href="beneficios.html" class="hover:text-brand-blue transition">Beneficios</a>
                 <a href="curso.html" class="hover:text-brand-blue transition">El Curso</a>
                 <a href="inversion.html" class="hover:text-brand-blue transition">Inversión</a>
                 <a href="contacto.html" class="hover:text-brand-blue transition">Contacto</a>
             </nav>
-            <div>
-                <a href="https://wa.me/591XXXXXXXX?text=Hola,%20quiero%20más%20información%20sobre%20TECZEN" target="_blank" class="bg-brand-blue hover:bg-sky-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg transition transform hover:-translate-y-0.5">
+            <div class="hidden sm:block">
+                <a href="https://wa.me/59163991169?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20TECZEN" target="_blank" rel="noopener noreferrer" class="bg-brand-blue hover:bg-sky-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg transition transform hover:-translate-y-0.5">
                     WhatsApp
                 </a>
             </div>
@@ -43,7 +45,10 @@
         <div class="bg-slate-900 text-white max-w-sm mx-auto p-8 rounded-3xl">
             <h2 class="text-2xl font-bold">Precio Lanzamiento</h2>
             <p class="text-5xl font-bold my-6">Bs 120</p>
-            <p>8 clases virtuales al mes.</p>
+            <p>8 clases virtuales al mes, en vivo y en grupos reducidos.</p>
+            <a href="https://wa.me/59163991169?text=Hola,%20quiero%20consultar%20por%20el%20curso%20TECZEN" target="_blank" rel="noopener noreferrer" class="mt-7 inline-block rounded-xl bg-sky-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-sky-300">
+                Consultar por WhatsApp
+            </a>
         </div>
     </main>
 
