@@ -18,6 +18,12 @@ body.dotted-blue-body {
     background-repeat: repeat, no-repeat;
 }
 
+.curriculum-week {
+    background-color: #2e1065;
+    background-image: radial-gradient(rgb(216 180 254 / 35%) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
 body .bg-brand-blue {
     background-color: var(--brand-blue);
 }
