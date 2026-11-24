@@ -22,9 +22,13 @@ body .text-brand-darkblue {
 }
 
 header {
-    background-color: #f1f5f9;
+    background-color: #bae6fd;
     border-bottom: 1px solid rgb(148 163 184 / 18%);
     backdrop-filter: blur(12px);
+}
+
+header nav:not(#mobile-menu) {
+    background-color: #bae6fd;
 }
 
 header .logo-nixmat {
