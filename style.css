@@ -9,6 +9,15 @@ body {
     background-image: linear-gradient(180deg, #f0f9ff 0, #f8fafc 20rem);
 }
 
+body.dotted-blue-body {
+    background-color: #0f172a;
+    background-image:
+        radial-gradient(rgb(56 189 248 / 18%) 1px, transparent 1px),
+        linear-gradient(180deg, #0f172a 0, #082f49 100%);
+    background-size: 16px 16px, 100% 100%;
+    background-repeat: repeat, no-repeat;
+}
+
 body .bg-brand-blue {
     background-color: var(--brand-blue);
 }
@@ -29,6 +38,11 @@ header {
 
 header nav:not(#mobile-menu) {
     background-color: #bae6fd;
+    font-size: 1.125rem;
+}
+
+header #mobile-menu {
+    font-size: 1.125rem;
 }
 
 header .logo-nixmat {
@@ -47,21 +61,6 @@ header nav a:hover {
 main h1 {
     color: var(--brand-dark);
     letter-spacing: -0.035em;
-}
-
-.course-page .course-hero h1 {
-    color: #fff;
-}
-
-.course-page .course-hero > div {
-    border: 0;
-    box-shadow: none;
-    transition: none;
-}
-
-.course-page .course-hero > div:hover {
-    box-shadow: none;
-    transform: none;
 }
 
 main > div > div {
