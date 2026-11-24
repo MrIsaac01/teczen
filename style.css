@@ -49,6 +49,21 @@ main h1 {
     letter-spacing: -0.035em;
 }
 
+.course-page .course-hero h1 {
+    color: #fff;
+}
+
+.course-page .course-hero > div {
+    border: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.course-page .course-hero > div:hover {
+    box-shadow: none;
+    transform: none;
+}
+
 main > div > div {
     border: 1px solid #e2e8f0;
     box-shadow: 0 12px 30px rgb(15 23 42 / 7%);
