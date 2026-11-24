@@ -27,6 +27,11 @@ header {
     backdrop-filter: blur(12px);
 }
 
+header .logo-nixmat {
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
 header nav a {
     transition: color 0.2s ease, background-color 0.2s ease;
 }
@@ -78,6 +83,12 @@ a[target="_blank"] {
 
 footer a {
     transition: color 0.2s ease;
+}
+
+@media (max-width: 639px) {
+    header .logo-nixmat {
+        font-size: 2rem;
+    }
 }
 
 button:focus-visible,
